@@ -151,17 +151,17 @@ function createColors(boardColors) {
 function createSolution(solutionColors, boardColors) {
 
     /* Use for testing: solution = 1, 1, 2, 2 */
-    solutionColors.color1 = boardColors.color1;
-    solutionColors.color2 = boardColors.color1;
-    solutionColors.color3 = boardColors.color2;
-    solutionColors.color4 = boardColors.color2;
+    //solutionColors.color1 = boardColors.color1;
+    //solutionColors.color2 = boardColors.color1;
+    //solutionColors.color3 = boardColors.color2;
+    //solutionColors.color4 = boardColors.color2;
 
-    /* Use for deployment: solution = random */
-    // Object.keys(solutionColors).forEach(key => {
-    //     let index = Math.floor(Math.random() * 6 + 1);
-    //     let indexString = `color${index}`;
-    //     solutionColors[key] = boardColors[indexString];
-    // })
+     /*Use for deployment: solution = random */
+     Object.keys(solutionColors).forEach(key => {
+         let index = Math.floor(Math.random() * 6 + 1);
+         let indexString = `color${index}`;
+         solutionColors[key] = boardColors[indexString];
+    })
 }
 
 function colorClickHandler(color, position, solution, boardColors) {
